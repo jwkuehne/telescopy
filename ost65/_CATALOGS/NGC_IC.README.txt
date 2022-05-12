@@ -1,0 +1,10 @@
+Source is Steinicke's NGC+IC catalog NI2016.xls
+http://www.klima-luft.de/steinicke/ngcic/rev2000/Explan.htm
+
+Extract EXCEL columns for ID, NGC#, Dreyer (blank or *),
+RA, DEC, and magnitude. The * indicates the Dreyer object,
+and not a supplementary identifier. Then use
+./NGCcull.pl < NGC_EXCEL.dat > NGC.dat to cull the file in
+preparation for NGCtoads.pl.
+
+Process IC rows the same way.

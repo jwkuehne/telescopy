@@ -1,0 +1,231 @@
+N.B. FK5 815 has 0.7, but HR 8303 is 2.39. The problem is that 815 is a variable
+star ranging from 0.7 to 2.4, and has had notable flares.
+
+
+I/149A        Fifth Fundamental Catalogue (FK5) Part I    (Fricke+, 1988)
+Fifth Fundamental Catalogue (FK5) Part I
+    Fricke W., Schwan H., Lederle T. (in collaboration with Bastian U.,
+    Bien R., Burkhardt G., du Mont B., Hering R., Jaehrling R.,
+    Jahreiss H., Roeser S., Schwerdtfeger H.M., Walter H.G.)
+   <Veroeff. Astron. Rechen-Institut Heidelb. No. 32 (1988)>
+   =1988VeARI..32....1F
+ADC_Keywords: Proper motions ; Positional data
+
+
+Abstract:
+    The Basic Fifth Fundamental Catalogue (FK5) Part I provides improved
+    mean positions and proper motions for the 1535 classical fundamental
+    stars that had been included in the FK3 and FK4 catalogs. The machine
+    version of the catalog contains the positions and proper motions of
+    the Basic FK5 stars for the epochs and equinoxes J2000.0 and B1950.0,
+    the mean epochs of individual observed right ascensions and
+    declinations used to determine the final positions, the mean errors of
+    the final positions and proper motions for the reported epochs, and
+    ancillary data such as magnitudes, spectral types, parallaxes, radial
+    velocities, and cross identifications to other catalog designations.
+
+Introduction:
+    The Basic FK5 is the successor to the FK4 (Fricke & Kopff 1963) and
+    contains the 1535 classical fundamental stars used to define the
+    latter system. It represents a revision of the FK4 and results from
+    the determination of systematic and individual corrections to the mean
+    positions and proper motions of the FK4, the elimination of the error
+    in the FK4 equinox, and the introduction of the IAU (1976) system of
+    astronomical constants. About 300 catalogs providing star positions
+    obtained from throughout the world are included in the FK5. This
+    document should be used only to supplement the information contained
+    in the source reference. The latter should be consulted for more
+    detailed information regarding the motivation for construction of the
+    FK5, the determination of its equator and equinox, the expressions for
+    general precession, a discussion of the FK5 system, systematic
+    differences between the FK4 and FK5, the transformation of
+    observational catalogs to the FK5 system and to the reference system
+    J2000.0, and more thorough descriptions of the data contained in the
+    FK5 catalog.
+
+File Summary:
+
+       FileName      Lrecl  Records   Explanations
+
+ReadMe            80        .   This file
+catalog          190     1535   The FK5 catalog
+
+
+See also:
+   I/175 : FK5, Part II (Extension).
+
+
+Byte-by-byte Description of file: catalog
+
+   Bytes Format    Units    Label     Explanations
+
+   1-  4  I4       ---      FK5      *[1/1670]+ FK5 number
+   6-  7  I2       h        RAh       Right ascension, hours,
+                                          Equinox=J2000, Epoch=J2000
+   9- 10  I2       min      RAm       Right ascension minutes (J2000.0)
+  12- 17  F6.3     s        RAs      *Right ascension seconds (J2000.0)
+  19- 25  F7.3     s/ha     pmRA      Proper motion in RA (J2000.0)
+      27  A1       ---      DE-       Sign of declination (Dec) (J2000.0)
+  28- 29  I2       deg      DEd       Declination degrees (J2000.0)
+  31- 32  I2       arcmin   DEm       Declination arcminutes (J2000.0)
+  34- 38  F5.2     arcsec   DEs      *Declination arcseconds (J2000.0)
+  40- 46  F7.2    arcsec/ha pmDE      Proper motion in DE (J2000.0)
+  48- 49  I2       h        RA1950h   Right ascension, hours
+                                          Equinox=B1950, Epoch=B1950
+  51- 52  I2       min      RA1950m   Right ascension minutes (B1950.0)
+  54- 59  F6.3     s        RA1950s  *Right ascension seconds (B1950.0)
+  61- 67  F7.3     s/ha     pmRA1950  Proper motion in RA (B1950.0)
+      69  A1       ---      DE1950-   Sign of declination (B1950.0)
+  70- 71  I2       deg      DE1950d   Declination degrees (B1950.0)
+  73- 74  I2       arcmin   DE1950m   Declination arcminutes (B1950.0)
+  76- 80  F5.2     arcsec   DE1950s  *Declination arcseconds (B1950.0)
+  82- 88  F7.2    arcsec/ha pmDE1950  Proper motion in DE (B1950.0)
+  90- 94  F5.2     a       EpRA-1900 *Mean Epoch of observed RA
+  96- 99  F4.1     ms       e_RAs    *Mean error in RA
+ 101-105  F5.1     ms/ha    e_pmRA    Mean error in pmRA
+ 107-111  F5.2     a       EpDE-1900 *Mean Epoch of observed DE
+ 113-116  F4.1     carcsec  e_DEs    *Mean error in Declination
+ 118-122  F5.1   carcsec/ha e_pmDE    Mean error in pmDE
+ 124-128  F5.2     mag      Vmag     *V magnitude
+     129  A1       ---      n_Vmag   *[VvD] Magnitude flag
+ 131-137  A7       ---      SpType   *Spectral type(s)
+ 139-144  F6.3     arcsec   plx      *?Parallax
+ 147-152  F6.1     km/s     RV       *?Radial velocity
+ 155-159  A5       ---      AGK3R     AGK3R number (Catalog I/72)
+ 161-165  A5       ---      SRS       SRS number (Catalog I/138)
+ 167-172  A6       ---      HD        HD number (Catalog III/135)
+ 174-183  A10      ---      DM       *DM identifier
+ 186-190  A5       ---      GC        GC number (Catalog I/113)
+
+Note on FK5:
+   These numbers have remained the same from the FK3 and FK4 (Catalog I/15).
+   The user should note that the file is ordered by FK5 number, which
+   means that the stars are arranged neither by right ascension nor by
+   declination.
+Note on RAs, RA1950s, DEs, DE1950s:
+    The B1950.0 data have been computed from the J2000.0 data using a
+    procedure described in the source reference (Fricke et al. 1988) 
+    based on the IAU (1976) system of astronomical constants (see also 
+    Lieske 1979), with elimination of the terms of elliptic aberration. 
+    These positions are therefore expressed in the new system, for 
+    epoch and equinox B1950.0
+Note on EpRA-1900, EpDE-1900:
+   Mean epoch (-1900.0) of the individual observed right ascensions and
+   declinations.
+Note on e_RAs and e_DEs:
+   The mean errors of the positions at the mean epoch and of the
+   corresponding proper-motion components, as obtained from the solution of
+   the normal equations within the derivations of individual positions and
+   proper motions. (These mean errors do not include those of the FK5
+   system and of the equinox and equator.)
+Note on Vmag:
+   Photoelectric magnitudes on the UBV system, as taken from the catalogs
+   of Nicolet (1975, 1978). Variability is indicated by a flag in byte 129.
+   For physical double stars, the magnitudes of the brighter components are
+   given (both are given in the published catalog).
+Note on n_Vmag:
+   Where magnitude ranges are given in the published catalog, the brighter
+   magnitude is given and byte 129 contains an upper case "V". A lower case
+   "v" is present if there is variability and that letter is present in the
+   published catalog (amplitude exceeds 0.3mag). A "D" code indicates that
+   the magnitudes of two close components are given as a footnote in the
+   published catalog. Only the first of the two is contained in the
+   magnitude field of the machine-readable catalog.
+Note on SpType:
+   A one-dimensional spectral type taken from the FK4 catalog. These types
+   are from the Henry Draper Catalogue (Cannon & Pickering 1918-24). For
+   binary and multiple systems where spectral types are known for more than
+   one component, a second spectral type may be given following a plus
+   sign.
+Note on plx:
+   Trigonometric parallax if known (blank otherwise). These data are
+   taken from a preliminary version of the new Yale parallax catalog
+   (van Altena, Lee, & Hoffleit, in preparation). Negative parallaxes
+   present in the Yale catalog have been omitted here because they are
+   of no use in computing apparent places from the mean positions.
+Note on RV:
+   Radial Velocity if known (blank otherwise)
+Note on DM: the prefixes are
+   BD:  Bonner Durchmusterung (Argelander 1859-62, Kuestner 1903 I/122)
+   SD: Southern Durchmusterung (Schoenfeld 1886 I/119)
+   CD: Cordoba Durchmusterung (Thome 1892- 1932 I/114)
+   CP: Cape Photographic Durchmusterung (Gill and Kapteyn 1895-1900 I/108)
+
+
+History:
+   The following format changes were made by W. H. Warren Jr. (with Dr.
+   Schwan's concurrence):
+      The DM identifiers, which were single-digit numerical codes, were
+         changed to the literal codes.
+      Plus signs were added to the trigonometric-parallax data, even though
+         no negative parallaxes are included in the catalog, to indicate
+         that negative parallaxes are possible.
+      Multiple blanks between data fields were removed, as were blanks
+         beyond the end of each record, to decrease the logical record
+         length from 220 bytes to 190 bytes.
+
+Acknowledgments:
+   Dr. H. Schwan kindly supplied the original and revised versions of the
+   on magnetic tape and colleagues at the Astronomisches Rechen-Institut
+   generously reviewed a draft copy of the original documentation prior to
+   its final release for distribution with machine-readable copies of the
+   catalog, and Dr. Schwan returned comments and corrections. Appreciation
+   is expressed to Dr. William M. Owen Jr. of JPL for supplying the
+   machine-readable FK4, DM cross index that was used to insert DM numbers
+   into the original version of the FK5 catalog.
+
+References:
+   Argelander, F. W. A. 1859-62, Bonner Sternverzeichniss, erste bis
+      dritte Sektion, Astronomischen Beobachtungen auf der Sternwarte der
+      Koeniglichen Rhein., Friedrich-Wilhelms-Universitaet zu Bonn, Baende
+      3-5   (Catalog I/122)
+   Boss, B. 1937, General Catalogue of 33342 Stars for the Epoch 1950,
+      Carnegie Institution of Washington Pub. 468 (Washington, Carnegie
+      Institution of Washington) (Catalog I/113)
+   Cannon, A. J., & Pickering, E. C. 1918-24, The Henry Draper
+      Catalogue, Ann. Astron. Obs. Harvard College, 91-99
+      (Catalog III/135)
+   Corbin, T. E. 1978, in IAU Colloquium 48, Modern Astrometry, ed. F. V.
+      Prochazka & R. H. Tucker (Vienna, University Obs.), p. 505
+      (Catalog I/72)
+   Fricke, W., & Kopff, A. 1963, Fourth Fundamental Katalog (FK4),
+      Veroeff. Astron. Rechen-Inst. Heidelb. No. 10. (Catalog I/15)
+   Fricke, W., Schwan, H., & Lederle, T. (in collaboration with
+      Bastian, U., Bien, R., Burkhardt, G., du Mont, B., Hering, R.,
+      Jaehrling, R., Jahreiss, H., Roeser, S., Schwerdtfeger, H. M., &
+      Walter, H. G.) 1988, Fifth Fundamental Catalogue (FK5), Part I. The
+      Basic Fundamental Stars, Veroeff. Astron. Rechen-Institut Heidelb.
+      No. 32  (Catalog I/149)
+   Gill, D., & Kapteyn, J. C. 1895-1900, Cape Photographic
+      Durchmusterung, Ann. Cape Obs., 3 (1895, Part I: zones -18 deg. to
+      -37 deg.); 4 (1897, Part II: zones -38 deg. to -52 deg.); 5 (1900,
+      Part III: zones -53 deg. to -89 deg.)   (Catalog I/108)
+   Kuestner, F. 1903, Bonner Durchmusterung des Noerdlichen Himmels,
+      zweite berichtigte Auflage, Bonn Universitaets Sternwarte (Bonn, A.
+      Marcus und E. Weber's Verlag) (Catalog I/122)
+   Lieske, J. H. 1979, Astron. & Astroph., 73, 282   (=1979A&A....73..282L)
+   Nicolet, B. 1975, Catalogue of Measurements in the Cape UBV
+      Photometry on Magnetic Tape, Astron. & Astroph. Supp., 22, 239
+      (Catalog II/27)
+   Nicolet, B. 1978, Catalogue of Homogeneous Data in the UBV
+      Photoelectric Photometric System, Astron. & Astroph. Supp., 34, 1
+      (=1978A&AS...34....1N)
+   Schoenfeld, E. 1886, Bonner Sternverzeichniss, vierte Sektion,
+      Astronomische Beobachtungen auf der Sternwarte der Koeniglichen
+      Rheinischen Friedrich-Wilhelms-Universitaet zu Bonn, 8, Part IV
+      (Bonn, Adolph Marcus Verlag)  (Catalog I/119)
+   Scott, F. P., & Smith, C. A., Jr. 1971, Comparison of the SAO and
+      AGK3R Star Catalogues, in Conference on Photographic Astrometric
+      Techniques, ed. H. K. Eichhorn, NASA CR-1825
+   Smith, C. A., Corbin, T. E., Hughes, J. A., Jackson, E. S.,
+      Krutskaya, E. V., Polozhentsev, A. D., Polozhentsev, D. D., Yagudin,
+      L. I., & Zverev, M. S. 1990, in IAU Symposium No. 141, Inertial
+      Coordinate System on the Sky, ed. J. H. Lieske & V. K. Abalakin
+      (Dordrecht, Reidel), p. 457 (Catalog I/138)
+   Thome, J. M. 1892-1932, Cordoba Durchmusterung,
+      Resultados del Observatorio Nacional Argentino, 16 (1892, Part I:
+      -22 deg. to -32 deg.); 17 (1894, Part II: -32 deg. to -42 deg.); 18
+      (1900, Part III: -42 deg. to -52 deg.); 21 (Part I) (1914, Part IV,
+      -52 deg. to -62 deg.); 21 (Part II) (1932, Part V: -62 deg. to
+      -90 deg.)  (Catalog I/114)
+(End)  Nancy G. Roman [ADC/SSDOO],  rev. Francois Ochsenbein [CDS]   1995-Jun-13

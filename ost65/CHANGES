@@ -1,0 +1,6 @@
+Refactored ZR parsing for MOUNT and INST,
+Refactored for ZP, ZD, ZA, ZR, CI, CM instead of one ZR command.
+added some PARSE_ERROR checks to LB, LF, and ZR,
+Changed SONA. PMB,TDK,RH,YEAR,MONTH,DAY,SEC,LST to be set immediately during file read or after overwritten by GET_ALTERNATE_DATE.
+FIXED ancillary sexagesimal input bug, when I switched to floating input to support decimal RA and DEC, and took out the
+abs() thus creating the infamous minus zero bug.
