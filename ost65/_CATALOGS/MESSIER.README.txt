@@ -1,6 +1,0 @@
-This Messier catalog is from the Kitt Peak National Observatory web site
-http://www-kpno.kpno.noao.edu/Info/Caches/Catalogs/Messier/messier_catalog.html
-sort -b -g --key=9 MESSIER.KPNO > MESSIER.dat was used to sort the KPNO catalog
-into Messier number order, with the text header subsequently removed for
-processing by MESSIERtoads.pl < MESSIER.dat > MESSIER.ads.
-
